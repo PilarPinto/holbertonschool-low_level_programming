@@ -1,16 +1,15 @@
 #include <stdio.h>
+/**
+ * main - Entry point
+ * print size of types
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-  char charT;
-  int intT;
-  long int lintT;
-  long long int llintT;
-  float floatT;
-  
-  printf("Size of a char: %ld byte(s)\n",sizeof(charT));
-  printf("Size of an int: %ld byte(s)\n",sizeof(intT));
-  printf("Size of a long int: %ld byte(s)\n",sizeof(lintT));
-  printf("Size of a long long int: %ld byte(s)\n",sizeof(llintT));
-  printf("Size of a float: %ld byte(s)\n",sizeof(floatT));
-  return 0;
+printf("Size of a char: %ld byte(s)\n", sizeof(char));
+printf("Size of an int: %ld byte(s)\n", sizeof(int));
+printf("Size of a long int: %ld byte(s)\n", sizeof(long int));
+printf("Size of a long long int: %ld byte(s)\n", sizeof(long long int));
+printf("Size of a float: %ld byte(s)\n", sizeof(float));
+return (0);
 }
