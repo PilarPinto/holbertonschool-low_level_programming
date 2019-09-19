@@ -7,18 +7,21 @@
 
 int main(void)
 {
-int num;
+int i;
 char space = 32;
 char comma = 44;
-for (num = '0'; num <= '9'; num++)
+
+i = '0';
+while (i <= '9')
 {
-putchar(num);
-if (num != '9')
+putchar(i);
+if (i != '9')
 {
 putchar(comma);
 putchar(space);
 }
 
+i++;
 }
 putchar('\n');
 return (0);
