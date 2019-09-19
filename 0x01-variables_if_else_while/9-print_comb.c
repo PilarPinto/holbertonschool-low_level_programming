@@ -1,21 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - ASCII
- *
- * Return: Always 0 (Success)
+ *main-ASCII
+ *Return: 0
  */
+
 int main(void)
 {
-char ch;
-char num;
+int num;
 char space = 32;
 char comma = 44;
-for (num = '0' ; num <= '9' ; num++)
+for (num = '0'; num <= '9'; num++)
 {
 putchar(num);
+if (num != '9')
+{
 putchar(comma);
 putchar(space);
+}
+
 }
 putchar('\n');
 return (0);
