@@ -1,9 +1,9 @@
 #include <stdio.h>
-
+#include <stdlib>
 /**
- *
- *Eliminate recursively the numer dec and dec+1 units
+ *main-Eliminate recursively the numer dec and dec+1 units
  *Return: 0
+ *
  */
 
 int main(void)
@@ -27,7 +27,7 @@ putchar(' ');
 }
 }
 }
-unit=49;
+unit = 49;
 }
 putchar('\n');
 return (0);
