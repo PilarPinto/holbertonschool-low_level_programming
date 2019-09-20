@@ -11,23 +11,23 @@ int main(void)
 int dec;
 int unit;
 
-for (dec = '0'; dec <= '9'; dec++)
+for (dec = 48; dec <= 57; dec++)
 {
-for (unit = '1'; unit <= '9'; unit++)
+for (unit = 49; unit <= 57; unit++)
 {
 
 if (dec != unit && dec < unit)
 {
 putchar(dec);
 putchar(unit);
-if (dec != '8' || unit != '9')
+if (dec != 56 || unit != 57)
 {
 putchar(',');
 putchar(' ');
 }
 }
 }
-unit = '1';
+unit=49;
 }
 putchar('\n');
 return (0);
