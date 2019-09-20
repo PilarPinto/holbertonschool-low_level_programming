@@ -1,33 +1,36 @@
 #include <stdio.h>
-#include <stdlib>
+
 /**
- *main-Eliminate recursively the numer dec and dec+1 units
+ *main-Using ASC
+ *no repeats
  *Return: 0
- *
  */
 
 int main(void)
 {
-int dec;
-int unit;
+int i;
+int j;
 
-for (dec = 48; dec <= 57; dec++)
+i = 48;
+j = 49;
+while (i < 58)
 {
-for (unit = 49; unit <= 57; unit++)
+while (j < 58)
 {
-
-if (dec != unit && dec < unit)
+if (i != j && i < j)
 {
-putchar(dec);
-putchar(unit);
-if (dec != 56 || unit != 57)
+putchar(i);
+putchar(j);
+= 56 || j != 57)
 {
-putchar(',');
-putchar(' ');
+putchar(44);
+putchar(32);
+		}
 }
+j++;
 }
-}
-unit = 49;
+i++;
+j = 49;
 }
 putchar('\n');
 return (0);
