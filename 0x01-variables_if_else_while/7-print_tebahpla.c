@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
+ * main - Using decrement for print
+ * an alphabet mirror
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 char ch;
 for (ch = 'z' ; ch >= 'a' ; ch--)
-putchar(ch);
+	putchar(ch);
 putchar('\n');
 return (0);
 }
