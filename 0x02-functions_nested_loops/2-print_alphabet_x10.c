@@ -1,16 +1,8 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  *main-Using a void function to print alphabet 10 times
  *Return: 0
  */
-
-int main(void)
-{
-print_alphabet_x10();
-return (0);
-}
-
 
 void print_alphabet_x10(void)
 {
@@ -19,9 +11,9 @@ void print_alphabet_x10(void)
 
 	while (c < 10)
 	{
-		for (ch = 'a'; ch < 'z'; ch++)
-			putchar (ch);
-		putchar ('\n');
+		for (ch = 'a'; ch <= 'z'; ch++)
+			_putchar (ch);
+		_putchar ('\n');
 		c++;
 	}
 }
