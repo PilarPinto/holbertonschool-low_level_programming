@@ -1,5 +1,5 @@
 #include "holberton.h"
-**
+/**
 *main-print the first 9 letters of Holberton with an array
 *Return: 0
 */
