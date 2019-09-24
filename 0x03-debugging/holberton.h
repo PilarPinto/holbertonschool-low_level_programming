@@ -13,7 +13,7 @@ int largest_number(int a, int b, int c);
 
 #ifndef PRINT_REMAINING_DAYS_H
 #define PRINT_REMAINING_DAYS_H
-void print_remaining_days(int a, int b, int c);
+void print_remaining_days(int month, int day, int year);
 #endif
 
 #ifndef CONVERT_DAY_H
