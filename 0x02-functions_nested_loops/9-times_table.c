@@ -16,28 +16,30 @@ void times_table(void)
 			times = mul * multy;
 			if (multy == 0 && times < 10)
 			{
-				putchar((times) + '0');
+				_putchar((times) + '0');
 			}
 			else if (mul == 0 && multy != 0)
 			{
-				putchar(' ');
-				putchar((times) + '0');
+				_putchar(' ');
+				_putchar((times) + '0');
 			}
 			else if (times < 10)
 			{
-				putchar(' ');
-				putchar((times) + '0');
+				_putchar(' ');
+				_putchar((times) + '0');
 			}
 			else
 			{
-				putchar(((times) / 10) + '0');
-				putchar(((times) % 10) + '0');
+				_putchar(((times) / 10) + '0');
+				_putchar(((times) % 10) + '0');
 			}
 			if (multy < 9)
 			{
-				putchar(',');
-				putchar(' ');
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		putchar('\n');
+
+_putchar('\n');
 	}
+}
