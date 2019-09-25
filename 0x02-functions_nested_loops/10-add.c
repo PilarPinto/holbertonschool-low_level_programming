@@ -8,7 +8,7 @@
 int add(int s1, int s2)
 {
 	int s;
-        s = s1 + s2;
-	
+
+	s = s1 + s2;
 	return (s);
 }
