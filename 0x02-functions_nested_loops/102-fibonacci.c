@@ -6,7 +6,7 @@
  * Return: Always 0 (Success)
  */
 
-int main()
+int main(void)
 {
 	long a = 0;
 	long b = 1;
@@ -15,13 +15,13 @@ int main()
 
 	for (i = 0; i < 50; i++)
 	{
-		acum = a + b ;
-		a = b ;
+		acum = a + b;
+		a = b;
 		b = acum;
 		if (!(i == 49))
-			printf("%ld, ",acum);
+			printf("%ld, ", acum);
 		else
-			printf("%ld\n",acum);
+			printf("%ld\n", acum);
 	}
-	return 0;
+	return (0);
 }
