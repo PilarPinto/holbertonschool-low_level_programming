@@ -6,24 +6,22 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int main()
 {
-	unsigned long a = 1;
-	unsigned long b = 2;
-	unsigned long c = 3;
+	long a = 0;
+	long b = 1;
+	long acum;
+	int i;
 
-	printf("%lu, ", a);
-	printf("%lu, ", b);
-	printf("%lu, ", c);
-	for (int i = 0; i < 47; i++)
+	for (i = 0; i < 50; i++)
 	{
-		a = b + c;
-		b = c;
-		c = a;
-		if (!(i == 46))
-			printf("%lu, ", a);
+		acum = a + b ;
+		a = b ;
+		b = acum;
+		if (!(i == 49))
+			printf("%ld, ",acum);
 		else
-			printf("%lu\n", a);
+			printf("%ld\n",acum);
 	}
-	return (0);
+	return 0;
 }
