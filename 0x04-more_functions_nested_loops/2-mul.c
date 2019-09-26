@@ -2,12 +2,14 @@
 
 /**
  * mul - Function to multiplies.
- * @c: Is the param.
+ * @a: Is the param.
+ * @b: Is the other param.
  * Return: c the result .
  */
 int mul(int a, int b)
 {
 	int c;
+
 	c = a * b;
 	return (c);
 }
