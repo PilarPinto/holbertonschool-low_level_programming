@@ -5,7 +5,7 @@
  * print_array - print a elements of an array.
  * @a: the array in a parameter
  * @n: Is the length of the array
- * Return: Always 0.
+ *
  */
 void print_array(int *a, int n)
 {
@@ -15,7 +15,7 @@ void print_array(int *a, int n)
 	{
 		if (i != n - 1)
 		{
-			printf("%d,  ", a[i]);
+			printf("%d, ", a[i]);
 		}
 		else
 			printf("%d", a[i]);
