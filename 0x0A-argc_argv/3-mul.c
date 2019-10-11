@@ -15,9 +15,18 @@ int main(int argc, char *argv[])
 	{
 		for (x = 1; x < argc; x++)
 		{
-			times *= atoi(argv[x]);
+			if (argc == 3)
+			{
+				times *= atoi(argv[x]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-	printf("%d\n", times);
+		printf("%d\n", times);
 	}
+
 	return (0);
 }
