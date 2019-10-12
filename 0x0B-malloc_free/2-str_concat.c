@@ -38,7 +38,7 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 /**
- * *_strcat- Concatenate two strings.
+ * *str_concat- Concatenate two strings.
  * @s1: Is the first string.
  * @s2: Is the second string
  * Return: The first + second.
@@ -55,7 +55,7 @@ char *str_concat(char *s1, char *s2)
 	ar = malloc((_strlen(s1) + _strlen(s2) * 1) + 1);
 	if (ar == '\0')
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	_strcat(ar, s1);
