@@ -11,15 +11,19 @@
 int main(int argc, char *argv[])
 {
 	int x, add = 0;
-	char num;
+	char *num;
 
 	for (x = 1; x < argc ; x++)
 	{
-		num = *argv[x];
+		num = argv[x];
 
-		if (isdigit(num) != 0)
+		if (isdigit(num[0]) != 0)
 		{
-			add += atoi(argv[x]);
+			add += (num[0] - 48);
+		}
+		else if (num[0] == '-' && isdigit(num[1]) != 0)
+		{
+			add += -(num[1]	- 48);
 		}
 		else
 		{
