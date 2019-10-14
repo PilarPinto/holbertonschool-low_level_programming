@@ -19,11 +19,11 @@ int main(int argc, char *argv[])
 
 		if (isdigit(num[0]) != 0)
 		{
-			add += (num[0] - 48);
+			add += atoi(argv[x]);
 		}
 		else if (num[0] == '-' && isdigit(num[1]) != 0)
 		{
-			add += -(num[1]	- 48);
+			add += atoi(argv[x]);
 		}
 		else
 		{
