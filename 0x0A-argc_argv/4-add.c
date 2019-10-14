@@ -10,26 +10,21 @@
 
 int main(int argc, char *argv[])
 {
-	int x, add = 0;
+	int x, add = 0, d;
 	char *num;
 
 	for (x = 1; x < argc ; x++)
 	{
 		num = argv[x];
-
-		if (isdigit(num[0]) != 0)
+		for (d = 0; num[d]; d++)
 		{
-			add += atoi(argv[x]);
+			if (isdigit(num[d]) == 0 && num[0] != '-')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else if (num[0] == '-' && isdigit(num[1]) != 0)
-		{
-			add += atoi(argv[x]);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		add += atoi(argv[x]);
 	}
 	printf("%d\n", add);
 	return (0);
