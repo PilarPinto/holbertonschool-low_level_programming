@@ -8,17 +8,20 @@
  * Return: 0 (Always success)
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-	int x, add = 0, count = 1;
-
+	int x, add = 0;
+	char num;
+	
 	for (x = 1; x < argc ; x++)
 	{
-		if(isdigit(*argv[1]))
+		num = *argv[x];
+		
+		if(isdigit(num) != 0)
 		{
 			add += atoi(argv[x]);
 		}
-		if(!(isdigit(*argv[count++])))
+		else
 		{
 			printf("Error\n");
 			return (1);
