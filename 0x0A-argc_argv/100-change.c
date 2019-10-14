@@ -9,10 +9,9 @@
 
 int main(int argc, char *argv[])
 {
-	
 	int cents = 0;
 	int money;
-		if(argc != 2)
+		if (argc != 2)
 		{
 			printf("Error\n");
 			return (1);
@@ -22,7 +21,7 @@ int main(int argc, char *argv[])
 		{
 			if (money - 25 >= 0)
 			{
-				money = money -25;
+				money = money - 25;
 				cents++;
 			}
 			else if (money - 10 >= 0)
@@ -40,7 +39,7 @@ int main(int argc, char *argv[])
 				money = money - 2;
 				cents++;
 			}
-			else if (money -1 >= 0)
+			else if (money - 1 >= 0)
 			{
 				money = money - 1;
 				cents++;
@@ -48,6 +47,5 @@ int main(int argc, char *argv[])
 
 		}
 	printf("%d\n", cents);
-   
-	return 0;
+	return (0);
 }
