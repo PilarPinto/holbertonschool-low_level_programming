@@ -7,21 +7,20 @@
 * @src: Is the source array that want to storage in dest
 * Return: Dest string.
 */
- char *_strcat(char *dest, char *src)
- {
+char *_strcat(char *dest, char *src)
+{
+	int i = 0, ind;
 
-	 int i = 0, ind;
-
-	 while (dest[i] != '\0')
-	 {
-		 i++;
-	 }
-	 for (ind = 0; src[ind] != '\0'; ind++)
-	 {
-		 dest[i++] = src[ind];
-	 }
-	 return (dest);
- }
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	for (ind = 0; src[ind] != '\0'; ind++)
+	{
+		dest[i++] = src[ind];
+	}
+	return (dest);
+}
 /**
  * argstostr - Liberate reserved space
  * @ac: Is the element counter
@@ -32,11 +31,11 @@
 char *argstostr(int ac, char **av)
 {
 	int indi, indj, counter;
-       	char *ar, *tabu;
+	char *ar, *tabu;
 
-	if(ac == 0 || av == NULL)
+	if (ac == 0 || av == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	else
 	{
@@ -56,18 +55,18 @@ char *argstostr(int ac, char **av)
 		for (indi = 0; indi < ac ; indi++)
 		{
 			ar = _strcat(ar, av[indi]);
-			if(ar == NULL)
+			if (ar == NULL)
 				return (NULL);
 			if ((indi + 1) < ac)
 			{
 				ar = _strcat(ar, tabu);
-				if(ar == NULL)
+				if (ar == NULL)
 					return (NULL);
 			}
 		}
 	}
 	ar = _strcat(ar, tabu);
-	if(ar == NULL)
+	if (ar == NULL)
 		return (NULL);
 	return (ar);
 }
