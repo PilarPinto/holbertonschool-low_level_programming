@@ -16,83 +16,34 @@ int _strlen(char *s)
 		len++;
 	return (len);
 }
-/**
- * *_strcat- Concatenate two strings.
- * @dest: Is the char array with 98 slots.
- * @src: Is the source array that want to storage in dest
- * Return: Dest string.
- */
-char *_strcat(char *dest, char *src)
-{
-
-	int i = 0, ind;
-
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	for (ind = 0; src[ind] != '\0'; ind++)
-	{
-		dest[i++] = src[ind];
-	}
-	return (dest);
-}
-/**
- * _strncat - Concatenate two strings.
- * @dest: Is the char array with 98 slots.
- * @src: Is the source array that want to storage in dest
- * @n: number of elements of the src
- * Return: Dest string.
- */
-char *_strncat(char *dest, char *src, int n)
-{
-
-	int i = 0, ind;
-
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	for (ind = 0; ind < n && src[ind] != '\0'; ind++)
-	{
-		dest[i + ind] = src[ind];
-	}
-	return (dest);
-}
-
 
 /**
  * *string_nconcat- Concatenate two strings.
  * @s1: Is the first string.
  * @s2: Is the second string
- * Return: The first + second.
+ * @n: The number of elements
+ * Return: ar the first + second.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ar;
-	unsigned int lenght;
+	unsigned int i, j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	ar = malloc((_strlen(s1) + _strlen(s2) * 1) + 1);
-	if (ar == '\0')
-	{
+	ar = malloc(_strlen(s1) + n + 1);
+	if (ar == NULL)
 		return (NULL);
-	}
-	_strcat(ar, s1);
-	lenght= _strlen(s2);
 
-	if (n >= lenght)
+	for (i = 0; s1[i] != '\0'; i++)
+		ar[i] = s1[i];
+	for (j = 0; j < n && s2[j] != '\0'; j++)
 	{
-		n = _strlen(s2);
-		_strncat(ar, s2, n);
-	}
-	else
-	{
-		_strncat(ar, s2, n);
+		ar[i] = s2[j];
+		i++;
 	}
 	return (ar);
 }
