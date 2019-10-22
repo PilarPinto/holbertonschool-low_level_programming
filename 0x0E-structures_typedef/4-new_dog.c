@@ -55,6 +55,13 @@ char *_strdup(char *str)
 	_strcpy(ar, str);
 	return (ar);
 }
+/**
+ * new_dog - creating a puppy form the dog structure.
+ * @name:The name of the nweDog
+ * @age: The age of the newDog
+ * @owner: The owner of the newDog
+ * Return: newDog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog;
@@ -68,7 +75,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	newDog->name = _strdup(name);
 
-	if(newDog->name == 0)
+	if (newDog->name == 0)
 	{
 		free(newDog);
 		return (0);
