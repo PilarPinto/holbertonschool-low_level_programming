@@ -2,14 +2,17 @@
 #include "function_pointers.h"
 
 /**
- * is_98 - check if a number is equal to 98
- * @elem: the integer to check
+ * int_index - Return the index if true
+ * @array: Is the pointer to an array
+ * @size: Is the size of the array
+ * @cmp: Is the pointer function
  *
- * Return: 0 if false, something else otherwise.
+ * Return: -1 if false, something else otherwise.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
+
 	if (cmp != NULL && array != NULL)
 	{
 		for (i = 0; i < size; i++)
