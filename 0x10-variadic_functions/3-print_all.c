@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_all - check the code for Holberton School students.
+ * @format: Is the format that depends of cesi
+ * Return: Nothing
  */
 void print_all(const char * const format, ...)
 {
@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 
 	va_start(arguments, format);
 
-	while (format[i] != '\0')
+	while (format && format[i])
 	{
 		switch(format[i])
 		{
