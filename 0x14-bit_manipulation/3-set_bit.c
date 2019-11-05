@@ -15,7 +15,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	number = 0;
 
-	while (number < index)
+	while (number <= index)
 	{
 		*n = (*n | 1 << index);
 		number++;
