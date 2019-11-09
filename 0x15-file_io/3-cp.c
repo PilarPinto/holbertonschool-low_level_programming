@@ -6,7 +6,7 @@
  * @av: The arguments
  * Return: Always 0.
  */
-int main(int ac, char **av)
+int main(int ac, char *av[])
 {
 	int fs, fde, nr, wr, cl, cl2;
 	char buf[1024];
