@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
- *
- *
- *
+ * read_textfile - Funtion to open and read
+ * @filename: Is the file to read
+ * @letters: Is the amount of characters in the text
+ * Return: The letters and the number
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
