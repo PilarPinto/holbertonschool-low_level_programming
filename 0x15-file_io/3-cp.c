@@ -9,7 +9,7 @@
 int main(int ac, char **av)
 {
 	int fs, fde, nr, wr, cl, cl2;
-	char *buf = malloc(1024);
+	char buf[1024];
 
 	if (ac != 3)
 	{
