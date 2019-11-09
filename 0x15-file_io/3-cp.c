@@ -1,10 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
+ * main - copy the contents of a file to another.
  * @ac: The index
  * @av: The arguments
- * Return: Always 0.
+ * Return: Always 0 success.
  */
 int main(int ac, char *av[])
 {
@@ -13,7 +13,7 @@ int main(int ac, char *av[])
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	}
 
 	fs = open(av[1], O_RDONLY);
