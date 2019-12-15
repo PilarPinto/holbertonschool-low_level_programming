@@ -9,18 +9,17 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_mem, *res_mem = *h;
-	unsigned int counter = 0;
+	/* unsigned int counter = 0 */
 
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 
-	while (counter < idx)
+	for (; idx !=1; idx --)
 	{
 		if (res_mem == NULL)
 			return (NULL);
 		res_mem = res_mem->next;
-		counter++;
-	}
+	}	
 	if (res_mem->next == NULL)
 		return (add_dnodeint_end(h, n));
 
