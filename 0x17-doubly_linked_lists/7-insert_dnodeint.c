@@ -14,12 +14,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 
-	for (; idx !=1; idx --)
+	for (; idx != 1; idx--)
 	{
 		if (res_mem == NULL)
 			return (NULL);
 		res_mem = res_mem->next;
-	}	
+	}
+
 	if (res_mem->next == NULL)
 		return (add_dnodeint_end(h, n));
 
