@@ -22,10 +22,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		*head = new_mem;
 		return (new_mem);
 	}
-	
 	last_dir = *head;
 
-	
 	while (last_dir->next != NULL)
 		last_dir = last_dir->next;
 	last_dir->next = new_mem;
