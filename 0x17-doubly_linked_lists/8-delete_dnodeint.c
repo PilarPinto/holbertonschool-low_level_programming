@@ -7,7 +7,7 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *res_mem = *head;
+	dlistint_t *p1, *res_mem = *head;
 	unsigned int counter = 0;
 
 	if (head == NULL || *head == NULL)
@@ -30,8 +30,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		res_mem = res_mem->next;
 		counter++;
 	}
+	res_mem->prev->next = res_mem->next;
 	if (res_mem->next)
 		res_mem->next->prev = res_mem->prev;
+	if (res_mem->next == NULL)
+	{
+		p1 = res_mem->prev;
+		p1->next = NULL;
+		free(res_mem);
+		return (1);
+	}
 	free(res_mem);
 	return (1);
 }
