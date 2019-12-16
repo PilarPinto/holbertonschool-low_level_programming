@@ -2,8 +2,8 @@
 /**
  * delete_dnodeint_at_index - Delete node at nth
  * @head: Pointer to direction of the head
- * @idexn: The position
- * Return: 1 if it succeeded or -1 if it failed 
+ * @index: The position in de ll
+ * Return: 1 if it succeeded or -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -17,7 +17,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (res_mem == NULL)
 			return (-1);
 		res_mem = res_mem->next;
-		index--; 
+		index--;
 	}
 	if (res_mem == *head)
 	{
