@@ -12,12 +12,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (head == NULL || *head == NULL)
 		return (-1);
 
-	while (index != 0)
+	for (; index != 0; index --)
 	{
 		if (res_mem == NULL)
 			return (-1);
 		res_mem = res_mem->next;
-		index--;
+		/* index--; */
 	}
 	if (res_mem == *head)
 	{
