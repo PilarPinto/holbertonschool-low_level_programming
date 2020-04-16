@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * binary_search - Binary search algortihm
+ * find_middle - Binary search algortihm middle part
  * @array: Is the input array
  * @low: Is the lowest number
  * @high: Is the highest number
@@ -12,6 +12,7 @@ int find_middle(int *array, int low, int high, size_t size, int value)
 {
 	int mid;
 	int ind = 0;
+
 	low = 0;
 	high = size - 1;
 
